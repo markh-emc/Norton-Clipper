@@ -1,0 +1,681 @@
+#bannerwrap {
+    .internal-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+body.home {
+    #bannerwrap {
+        padding-top: 3.125em;
+    }
+}
+
+
+.moduletable.product-boxes-tiles {
+    width: 82%;
+    margin: 0 auto;
+    @media screen and (min-width: 1024px) {
+        width: 90%;
+        max-width: 1400px;
+    }
+}
+
+.products-banner {
+    position: relative;
+
+    margin-bottom: 1em;
+    .text {
+        position: absolute;
+        top: 44%;
+        right: 0;
+
+        width: 90%;
+        padding: 2em;
+
+        transform: translateY(-50%);
+
+        background-color: rgba(26, 24, 24, .8);
+
+        span.mobile-gone {
+            @media screen and (max-width: 1023px) {
+                display: none;
+            }
+        }
+        p {
+            display: none;
+
+            max-width: 471px;
+            // font-size: 1.125em;
+
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.25em;
+
+            color: @white;
+        }
+    }
+
+    h2 {
+        margin: 0;
+        // margin-bottom: 15px;
+        margin-bottom: 0;
+        // font-size: 1.75em;
+
+        font-size: 1em;
+        line-height: 1.25em;
+
+        text-transform: uppercase;
+
+        font-weight: 400;
+
+        color: @white;
+    }
+    .link {
+        position: relative;
+        top: -24px;
+        left: 10%;
+
+        display: none;
+
+        width: 100%;
+        a {
+            height: 46px;
+            padding: 0 40px;
+
+            font-size: 1em;
+            font-weight: 500;
+            line-height: 1.75em;
+
+            text-transform: uppercase;
+
+            color: @white;
+            background: #1a1919;
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 336px;
+
+                display: inline-block;
+
+                width: 48px;
+                height: 46px;
+
+                font-family: fontawesome;
+                font-size: 1.68em;
+                line-height: 46px;
+
+                content: '\f178';
+                text-align: center;
+
+                color: #fff;
+            }
+        }
+
+        &.blue {
+            a {
+                &:after {
+                    background: #0079c2;
+                }
+                span {
+                    color: #0079c2;
+                    &.roll-text {
+                        color: @white;
+                    }
+                }
+            }
+        }
+
+        &.orange {
+            a {
+                &:after {
+                    background: #ff5000;
+                }
+                span {
+                    color: #ff5000;
+                    &.roll-text {
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Banner Image */
+.moduletable.banner {
+    position: relative;
+
+    padding: 2em 0;
+    &:before {
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        bottom: 36px;
+
+        display: inline-block;
+
+        width: 36px;
+        height: 36px;
+
+        content: '';
+
+        background: url(../images/banner-mobile-triangle.png);
+        background-repeat: no-repeat;
+    }
+    .zenimage {
+        &:before {
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            display: inline-block;
+
+            content: '';
+
+            background: rgba(0, 121, 194, .4);
+        }
+        img {
+            position: relative;
+
+            width: 100%;
+            margin-bottom: 0 !important;
+
+            box-shadow: none;
+        }
+    }
+
+    .zentext {
+        position: absolute;
+        z-index: 10000;
+        top: 50%;
+        right: 0;
+        left: 0;
+
+        width: 90%;
+        margin: 0 auto;
+
+        transform: translateY(-50%);
+        h2,
+        p, h1 {
+            color: @white;
+        }
+
+        h2 {
+            margin-top: 0;
+
+            font-size: 3em;
+            font-weight: 400;
+            line-height: 1.33em;
+
+            text-transform: uppercase;
+        }
+
+        p, h1 {
+            font-size: 1.4em;
+            line-height: 1.53em;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/* Roll Over Buttons */
+.wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    overflow: hidden;
+
+    height: 49px;
+
+    font-weight: 600;
+    line-height: 49px;
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    letter-spacing: 1px;
+
+    color: white;
+    /* andys amazing code */
+    border: none;
+}
+
+.roll-text {
+    position: relative;
+
+    display: block;
+
+    line-height: 46px;
+
+    transition: all 480ms cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.roll-text:last-child {
+    color: #fff;
+}
+
+.rollover:hover .roll-text:first-child {
+    margin-top: -46px;
+}
+
+
+/* Internal Banners */
+.moduletable.internal-banner {
+    position: relative;
+    &:before {
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        bottom: -1px;
+
+        display: inline-block;
+
+        width: 36px;
+        height: 36px;
+
+        content: '';
+
+        background: url(../images/banner-mobile-triangle.png);
+        background-repeat: no-repeat;
+    }
+
+    .image {
+        &:before {
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            display: inline-block;
+
+            content: '';
+
+            background: rgba(0,121,194,.4);
+        }
+    }
+
+    .text {
+        position: absolute;
+        z-index: 10000;
+        top: 50%;
+        right: 0;
+        left: 0;
+
+        width: 90%;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        text-align: center;
+        h1, p {
+            font-size: 1.875em;
+            font-weight: 400;
+            line-height: 1.41em;
+
+            text-transform: uppercase;
+
+            color: @white;
+        }
+    }
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 686px) {
+    .moduletable.banner {
+        .zenimage {
+            img {
+                width: 100%;
+                max-width: none !important;
+                min-height: 380px;
+                max-height: 380px;
+            }
+        }
+    }
+    .moduletable.internal-banner {
+        img {
+            width: auto;
+            max-width: none !important;
+            min-height: 200px;
+            max-height: 200px;
+        }
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .moduletable.banner {
+        .zenimage {
+            img {
+                width: 100%;
+                max-width: none !important;
+                min-height: 500px;
+                max-height: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .products-banner {
+        h2 {
+            margin-bottom: 15px;
+
+            font-size: 1.75em;
+        }
+
+        p {
+            font-size: 1.125em;
+        }
+    }
+}
+
+
+@media screen and (min-width: 750px) {
+
+    .moduletable.banner {
+        .zentext {
+            right: inherit;
+            left: 13%;
+
+            width: 66%;
+            h2 {
+                font-size: 3.75em;
+            }
+
+            p, h1 {
+                font-size: 1.625em;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+  .products-banner {
+      .text {
+          h2 {
+              font-size: 2.25em;
+          }
+
+          p {
+              display: block;
+          }
+      }
+  }
+}
+
+
+@media screen and (min-width: 925px) {
+    .moduletable.products-banner {
+        float: left;
+        clear: none;
+        overflow: hidden;
+
+        width: 49%;
+        margin-right: 2%;
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+
+        img {
+            width: inherit;
+            max-width: inherit;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1100px) {
+    .products-banner .link a {
+        padding: 0 30px;
+        &:after {
+            left: 316px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body.home {
+        #bannerwrap {
+            position: relative;
+
+            padding-top: 0;
+            padding-bottom: 214px;
+        }
+    }
+    .moduletable.banner {
+        overflow: hidden;
+
+        max-height: 522px;
+        padding: 0;
+
+        &:before {
+            bottom: -1px;
+
+            width: 88px;
+            height: 88px;
+
+            background: url(../images/banner-desktop-triangle.png);
+        }
+        .zentext {
+            right: 0;
+            left: 0;
+
+            width: 79%;
+            max-width: 1400px;
+            margin: 0 auto;
+            .banner-text {
+                float: left;
+
+                width: 59%;
+                h2 {
+                    font-size: 3em;
+                }
+                p, h1 {
+                    font-size: 2em;
+                }
+            }
+        }
+        .zenimage {
+            min-height: 522px;
+            max-height: 522px;
+            img {
+                width: 100%;
+                max-width: none !important;
+                margin: 0 !important;
+            }
+        }
+    }
+
+    .moduletable.product-boxes-tiles {
+        position: absolute;
+        z-index: 1001;
+        right: 0;
+        bottom: -40px;
+        left: 0;
+
+        display: block;
+
+        height: inherit;
+
+        .products-banner {
+            margin-bottom: 0;
+            .text {
+                h2 {
+                    font-size: 1.5em;
+                }
+            }
+
+            .link {
+                display: inline-block;
+            }
+        }
+    }
+
+    .moduletable.internal-banner {
+        &:before {
+            bottom: -1px;
+
+            width: 88px;
+            height: 88px;
+
+            background: url(../images/banner-desktop-triangle.png);
+        }
+
+        .text {
+            text-align: left;
+            h1, p {
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+
+.moduletable.banner {
+    position: relative;
+}
+
+.zentools .slide-controller {
+    position: static;
+
+    overflow: visible !important;
+}
+
+ul.slidenav.zenright {
+    text-align: right;
+}
+
+/* Pagination Controls */
+.slidenavthumb {
+    position: absolute !important;
+    z-index: 100000;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+
+    width: 90% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+}
+
+
+.zentools ul.slidenav li img {
+    max-width: 50px;
+
+    box-shadow: none;
+}
+
+.zentools ul.slidenav li.active img {
+    border: solid 1px #fff;
+}
+
+
+.flex-pauseplay {
+    display: none;
+}
+
+
+#banner {
+    .zentools {
+        ul.flex-direction-nav {
+            position: absolute;
+            z-index: 10000;
+            top: 50%;
+            right: 0;
+            left: 0;
+
+            width: 100% !important;
+            margin: 0 auto;
+
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+
+            li {
+                a {
+                    width: 74px;
+                    height: 74px;
+                    margin: 0;
+                    padding: 0;
+
+                    line-height: 74px;
+
+                    text-align: center;
+
+                    border: none;
+                    border-radius: 0;
+                    background: #000;
+                    box-shadow: none;
+                    &:hover {
+                        background: lighten(#000, 10%);
+                    }
+                    span {
+                        display: none;
+                    }
+
+                    i {
+                        display: none;
+                    }
+
+                    &:before {
+                        display: inline-block;
+
+                        font-family: 'fontawesome';
+                        font-size: 40px;
+
+                        content: '\f177';
+
+                        color: #fff;
+                    }
+                }
+
+                &:nth-child(2) {
+                    float: right;
+                    a {
+                        &:before {
+                            display: inline-block;
+
+                            font-family: 'fontawesome';
+                            font-size: 40px;
+
+                            content: '\f178';
+
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 749px) {
+    .slide-controller {
+        display: none;
+    }
+
+    .moduletable.banner {
+        &:before {
+            bottom: 26px;
+        }
+    }
+}

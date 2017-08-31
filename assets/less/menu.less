@@ -1,0 +1,219 @@
+.moduletable.products-menu {
+  overflow: visible;
+  ul.nav.menu {
+    li {
+      position: relative;
+
+      > ul {
+        display: none;
+        position: absolute;
+        width: 250px;
+        min-height: 397px;
+        height: 100%;
+        background: @norton-orange;
+        border-top: solid 33px #ffffff;
+        padding-left: 0;
+        padding: 18px 0;
+        // border: solid 1px #000000;
+
+        > li {
+          position: static;
+          display: inline-block;
+          // width: 372px;
+          width: 100%;
+          color: #000000;
+          a {
+            font-size: 1em;
+            font-weight: 400;
+            color: @white;
+            padding: 10px 50px 10px 20px;
+            display: inline-block;
+            width: 100%;
+            line-height: 1.25em;
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+            text-overflow: ellipsis;
+            &:after {
+              content: '\f178';
+              color: @white;
+              float: right;
+              font-family: 'fontawesome';
+              display: inline-block;
+              position: absolute;
+              right: 6%;
+              top: 30%;
+            }
+          } // A
+
+          > ul {
+            display: none;
+            position: absolute;
+            width: 250px;
+            min-height: 364px;
+
+            // background: url(../images/core-bits-background.png) no-repeat bottom right, #c3c3c3;
+            background: #a8a4a4;
+            border-top: solid 0px #ffffff;
+
+            li {
+
+              a {
+                padding-left: 46px;
+                &:after {
+                  display: none;
+                }
+              }
+
+            }
+            // border: solid 1px #000000;
+          } // Third Level
+          &:hover {
+
+            a {
+              box-shadow: 0px 4px 12.09px 0.91px rgba(174, 55, 0, 0.25);
+              &:after {
+                color: #000000;
+              }
+            }
+
+            >ul {
+              display: block;
+              z-index: 20001;
+              right: -100%;
+              top: 0;
+
+              > li {
+
+                > a {
+                  box-shadow: none;
+                }
+
+                &:hover {
+
+                  > a {
+                    box-shadow: 0px 4px 9.3px 0.7px rgba(99, 100, 102, 0.25);
+                  }
+                }
+              }
+            } // Third Level Hover
+          } // Second Level Hover
+
+
+          // Titles//
+          // &.item-236 {
+          //   > ul {
+          //     &:before {
+          //       content: 'CORE DIMOND BLADES';
+          //       display: block;
+          //       color: @white;
+          //       font-size: 1.5em;
+          //       line-height: 1.25em;
+          //       padding-left: 43px;
+          //       padding-top: 24px;
+          //       margin-bottom: 18px;
+          //     }
+          //   }
+          // }
+          // Titles//
+
+        } // Second Level LI
+      } // Second Level
+
+      &:hover{
+        >ul {
+          display: block;
+          z-index: 20001;
+        } // Second Level Hover
+      } // Top Level Hover
+    } // Top level.moduletable.products-menu ul.nav.menu li>ul
+  } // Menu UL
+} // Menu
+
+
+
+@media screen and (min-width: 1500px) {
+  .moduletable.products-menu {
+    ul.nav.menu {
+      li  {
+        >ul  {
+          width: 372px;
+           li {
+             ul {
+               width: 372px;
+             }
+           }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  #menu {
+    ul.nav.menu.moved {
+      > li {
+        cursor: pointer;
+        &:hover {
+          > ul {
+            display: block;
+          }
+        }
+        > ul {
+          display: none;
+          padding-left: 10px;
+
+          > li {
+            > ul {
+              display: none;
+              padding-left: 10px;
+            }
+            &:hover {
+              > ul {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      li.parent {
+        a {
+          &:after {
+            content: '\f0d7';
+            color: #ffffff;
+            display: inline-block;
+            margin-left: 4px;
+            font-family: 'fontawesome';
+          }
+        }
+
+        > ul {
+           > li {
+             a {
+               &:after {
+                 content: '\f0d7';
+                 color: #ffffff;
+                 display: inline-block;
+                 margin-left: 4px;
+                 font-family: 'fontawesome';
+               }
+             }
+
+             > ul {
+               > li {
+                 a {
+                   &:after {
+                     display: none;
+                   }
+                 }
+               }
+             }
+           }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+#breadcrumb {
+
+  position: relative;
+}
+.moduletable.breadcrumb {
+  background: #eeeeee;
+  ul {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    li {
+      list-style-type: none;
+      padding: 5px 0px 5px 10px;
+      display: inline-block;
+      &:first-child {
+        display: none;
+      }
+      &:nth-child(2) {
+        margin-left: 0px;
+      }
+      a {
+        text-transform: uppercase;
+        color: #636466;
+        &:hover {
+          color: @norton-orange;
+        }
+        span {
+          color: #636466;
+          &:hover {
+            color: @norton-orange;
+          }
+        }
+      }
+
+      span {
+        text-transform: uppercase;
+        color: @norton-orange;
+      }
+    }
+  }
+  span.divider {
+    img {
+      display: none;
+    }
+    &:before {
+      content: '\f0da';
+      display: inline-block;
+      font-size: 1em;
+      color: #000000;
+      font-family: 'fontawesome';
+      margin-left: 6px;
+    }
+    &:first-child {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .moduletable.breadcrumb {
+    ul {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      margin-top: 30px;
+    }
+    span.divider {
+      &:before {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+
+/* Share */
+
+
+.moduletable.social-share {
+  margin-bottom: 20px;
+  display: inline-block;
+  // margin-right: 30px;
+  // line-height: 44px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: solid 1px white;
+  color: @white;
+  cursor: pointer;
+  vertical-align: bottom;
+  max-height: 48px;
+  line-height: 48px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  max-width: 179px;
+  height: 48px;
+  width: 100%;
+  text-align: center;
+  .custom {
+    position: relative;
+  }
+
+  .fastsocialshare_container {
+    display: none;
+    padding-top: 12px;
+    padding-left: 12px;
+    &.active {
+      display: block;
+    }
+
+    > div {
+      margin: 0 5px;
+    }
+  }
+
+  span.cross.active {
+    display: inline-block;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+
+    &:after {
+      content: '\f00d';
+      font-family: 'fontawesome';
+      color: @white;
+      font-size: 1em;
+    }
+  }
+
+  #share-button {
+    display: inline-block;
+    color: @white;
+    font-weight: 700;
+    font-size: 1em;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 24px;
+      background: url(../images/share-image.png) no-repeat;
+      position: relative;
+      left: 10px;
+      top: 5px;
+    }
+
+    &.active-button {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1500px) {
+  .moduletable.social-share {
+    position: static;
+  }
+}

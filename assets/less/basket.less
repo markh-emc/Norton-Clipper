@@ -1,0 +1,94 @@
+.basket {
+  table.cart-summary.proopc-table-striped {
+    tr th {
+      background-color: #0079c2;
+      color: @white;
+    }
+  }
+
+  #ProOPC {
+    .proopc-register-login {
+      h3 {
+        background-color: #0079c2;
+        color: @white;
+      }
+    }
+
+    .proopc-process-title {
+      background-color: #0079c2;
+      color: @white;
+      .proopc-step {
+        display: none;
+      }
+    }
+
+    button {
+      font-size: 0.875em;
+      font-family: @font !important;
+      font: inherit !important;
+    }
+
+    .proopc-group {
+      button {
+            background: url(../images/arrow-right.png) 101% center,#1a1919;
+            background-repeat: no-repeat;
+            padding: 5px 62px 5px 12px;
+            color: #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-top: 14px;
+            box-shadow: 0 3px 7px 0 rgba(99,100,102,.4);
+            border-radius: 0px;
+            font-size: 0.875em;
+            font-family: @font;
+            filter: none !important;
+            min-height: 44px;
+            &:hover {
+              color: @norton-orange;
+            }
+      }
+    }
+
+    .proopc-row.proopc-checkout-box {
+      button {
+            background: url(../images/arrow-right.png) 101% center,#1a1919;
+            background-repeat: no-repeat;
+            padding: 12px 53px 12px 12px;
+            color: #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-top: 14px;
+            box-shadow: 0 3px 7px 0 rgba(99,100,102,.4);
+            border-radius: 0px;
+            font-size: 0.875em !important;
+            font-family: @font;
+            filter: none !important;
+
+            @media screen and (min-width: 1200px) {
+              font-size: 1em !important;
+            }
+            &:hover {
+              color: @norton-orange;
+            }
+      }
+    }
+  }
+
+  #ProOPC .proopc-input-append input[type="text"], #ProOPC .proopc-input-append input[type="email"], #ProOPC .proopc-input-append input[type="password"] {
+    border: 1px solid #c3c3c3;
+    box-shadow: 0 3px 7px 0 rgba(99,100,102,.4);
+    padding: 10px 10px !important;
+    width: 90% !important;
+    // box-sizing: border-box !important;
+  }
+
+  .cart-summary.proopc-table-striped .grand-total td, .cart-summary.proopc-table-striped .grand-total-p-currency td, .continue-checkout-box {
+    background-color: #0079c2;
+  }
+}
+
+#fancybox-content {
+  padding: 20px;
+  border: none !important;
+  background: @white;
+}
